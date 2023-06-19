@@ -1,27 +1,32 @@
 <!-- interview question javascript -->
 
-JAVASCRIPT : JavaScript is a dynamic programming language that's used for web development, in web applications, for game development, and lots more. It allows you to implement dynamic features on web pages that cannot be done with only HTML and CSS.
+**JAVASCRIPT :**
+- JavaScript is a dynamic programming language that's used for web development, in web applications, for game development, and lots more.
+- It allows you to implement dynamic features on web pages that cannot be done with only HTML and CSS.
 
 
-Question 1:- Why do we call JavaScript as dynamic language?
-js is dynamic language means dtat types of the variables can hange during the run time.
+**Question 1:- Why do we call JavaScript as dynamic language?**
+- js is dynamic language means data types of the variables can change during the run time.
 
+<br>
 
+**Question 2:- how does JavaScript determine data types ?**
+- js determines data types depending upon the value asigned
 
-Question 2:- how does JavaScript determine data types ?
-js determines data types depending upon the value asigned
+<br>
 
+ **Question 3:- What is typeof functions?**
+ - It allows a programmer to quickly check a variable's data type
 
+<br>
 
- Question 3:- What is typeof functions?
- It allows a programmer to quickly check a variable's data type
+ **Question 4:- How to check data type in JavaScript ?**
+ - we can get datatype by using typeOf function.
 
-
- Question 4:- How to check data type in JavaScript ?
- we can get datatype by using typeOf function.
-
+ <br>
  
-Question 5:- What are different datatypes in JavaScript ? 
+**Question 5:- What are different datatypes in JavaScript ?**
+```
 // primitive
 var str = "rutvik";   //string
 var num = 10;  //number
@@ -35,77 +40,81 @@ var sym = Symbol();   //symbol
 var obj = new Objects();  //object
 
 NOTE : shortcut trick : SNNUBO
+```
+<br>
 
-
-
-Question 6:- Explain Undefined Data types ? 
-Undefined means the variable has been declared but no value is assigned to it.
+**Question 6:- Explain Undefined Data types ?**
+- Undefined means the variable has been declared but no value is assigned to it.
+```
 var x = 10;
 var y = "rutvik";
 var z;  ---> undefined
+```
+<br>
 
+**Question 7:- What is Null ?**
+- null means absence of data. Null indicates 
+- its not zero, 
+- its not empty 
+- its just absence of data
 
+<br>
 
-Question 7:- What is Null ?
-null means absence of data. Null indicates 
-its not zero, 
-its not empty 
-its just absence of data
+**Question 8:- Differentiate between Null and Undefined ?** 
+- Undefined : variable has been created but value is not assigned
 
-
-
-Question 8:- Differentiate between Null andUndefined ?  
-Undefined : variable has been created but value is not assigned
-
+```
 var iAmStandBy;
 console.log(iAmStandBy);
 console.log(typeof(iAmStandBy)); --> undefined
+```
 
-Null : we assign value NULL, it indicates absence of data.
+- Null : we assign value NULL, it indicates absence of data.
 
+```
 var iAmUseless = null;
 console.log(iAmUseless);
 console.log(typeof(iAmUseless)); --> object
+```
+<br>
 
-
-
-Question 9:- Explain Hoisting ?
-JavaScript Hoisting is a mechanism where variables and function declaration are moved to the top of the scope.  before the code execution
+**Question 9:- Explain Hoisting ?**
+- JavaScript Hoisting is a mechanism where variables and function declaration are moved to the top of the scope.  before the code execution
+```
 console.log(y);
 var y=10;
+```
+<br>
 
+**Question 10:- Are JavaScript initialization hoisted ?**
+- No
+- it is not saying y=10 it is saying y is undefined, it has not moved the initialization until this ```var y=10;``` line executes.
+- once ```y=10;``` line executes then it become 10
 
+<br>
 
-Question 10:- Are JavaScript initialization hoisted ?
-No
-it is not saying y=10 it is saying y is undefined, it has not moved the initialization
-until this var y=10; line executes.
-once y=10; line executes then it become 10
-
-
-
-
-
-Question 11:- What are global variables ?
-Global variables are accessible through out the web page or the document.
+**Question 11:- What are global variables ?**
+- Global variables are accessible through out the web page or the document.
+```
 var x=10;
 function fun1()
 {
     console.log(x);
 }
 fun1();
+```
+<br>
+
+**Question 12:- What are the issues with Global variables ?**
+- Global variables can be altered by any part of the code, making it difficult to remember or reason about every possible use.
+- This means that they can be changed by any function at any point and may affect the program as a whole.
+- problem with global variable is it can make application very hard to debug and buggy.
 
 
+<br>
 
-Question 12:- What are the issues with Global variables ?
-Global variables can be altered by any part of the code, making it difficult to remember or reason about every possible use.
-This means that they can be changed by any function at any point and may affect the program as a whole.
-problm eith global variable is it can make application very hard to debug and buggy.
-
-
-
-
-Question 13:- What happens when you declare variable without VAR ?
+**Question 13:- What happens when you declare variable without VAR ?**
+```
 var x=10;
 function fun1(){
     y=100;
@@ -113,19 +122,22 @@ function fun1(){
 }
 fun1();
 console.log(y);
-
+```
 - when we declare variable without var keyword
-  variable becomes global.
-  that means y is also acessible outside the function.
+- variable becomes global.
+- that means y is also acessible outside the function.
 
+<br>
 
-
-Question 14:- What is Use Strict ?
-Use Strict is a directive which says strickly check variables are defined using the var keyword or the let keyword.
+**Question 14:- What is Use Strict ?**
+- Use Strict is a directive which says strickly check variables are defined using the var keyword or the let keyword.
+<br>
 -------------------------------------------------
-Question 15:- How to force developers to use Var keyword ?
-if it not defined using var keyword it will throw an exception.
+<br>
 
+**Question 15:- How to force developers to use Var keyword ?**
+- if it not defined using var keyword it will throw an exception.
+```
 var x=10;
 function fun1(){
     y=100;  ---> here we not use var keyword that means compiler throw the error
@@ -135,23 +147,21 @@ fun1();
 console.log(y);
 
 Error : ReferenceError : y is not defined
+```
+<br>
 
-
-
-
-
-Question 16:- How can we handle Global Variables ?
-Question 17:- How can we avoid Global variables ?
-its difficult to avoid global variables. But we can organize it properly by doing two thing
+**Question 16:- How can we handle Global Variables ?**
+**Question 17:- How can we avoid Global variables ?**
+- its difficult to avoid global variables. But we can organize it properly by doing two thing
 1. put global variables in a proper Namespace.
 2. create closure and apply module pattern and IIFE.
 
+<br>
 
 
-
-Question 18:- What are Closures ?
-Closures are functions inside function and it makes a normal function stateful.
-
+**Question 18:- What are Closures ?**
+- Closures are functions inside function and it makes a normal function stateful.
+```
 function SimpleFunction(){
     var x=0;
     x++;
@@ -165,15 +175,8 @@ function ClosureFunction(){
         Increment
     }
 }
-
-
-
-
-
-
-
-
-
+```
+<br>
 
 Question 19:- Why do we need Closures ?
 Question 20:- Explain IIFE ?
@@ -223,7 +226,7 @@ Question 56. Eventloop and Callback code question
 
 
 
-1. What is NaN?
+**Question : What is NaN?**
 -->
 
 console.log("rutvik" - "makvana");
@@ -240,7 +243,7 @@ console.log(isNaN(myPhoneNumber)); --> output : false
 console.log(isNaN(myName)); --> output : true
 
 
-3. wht is the  difference between == and === ?
+**Question : what is the  difference between == and === ?**
 -->
 
     var num1 = 5;
@@ -256,7 +259,7 @@ console.log(isNaN(myName)); --> output : true
     ---> beacuse === is check value and data type also
 
 
-4. Why Functions?
+**Question : Why Functions?**
 -->   
 
      // You can reuse code:Define the code once,and use it many times.
